@@ -150,6 +150,29 @@ history_df = pd.DataFrame(history.history)
 history_df.loc[:,['loss','val_loss']].plot()
 history_df.loc[:,['accuracy','val_accuracy']].plot()
 plt.show()
+
+import matplotlib.pyplot as plt
+
+# Assuming you have history object from model.fit()
+plt.figure(figsize=(8,5))
+plt.plot(history.history['accuracy'], label='Training Accuracy')
+plt.plot(history.history['val_accuracy'], label='Validation Accuracy')
+plt.title('Model Accuracy')
+plt.xlabel('Epoch')
+plt.ylabel('Accuracy')
+plt.legend()
+plt.savefig('../results/accuracy.png')
+plt.close()
+
+plt.figure(figsize=(8,5))
+plt.plot(history.history['loss'], label='Training Loss')
+plt.plot(history.history['val_loss'], label='Validation Loss')
+plt.title('Model Loss')
+plt.xlabel('Epoch')
+plt.ylabel('Loss')
+plt.legend()
+plt.savefig('../results/loss.png')
+plt.close()
  
 #MODEL EVALUATION
 Y_pred = model.predict(X_val)
