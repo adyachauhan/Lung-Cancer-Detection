@@ -82,6 +82,10 @@ python lungcancerproject.py
 
 > ⚠️ This model is intended for educational and research purposes only and is not a substitute for professional medical diagnosis.
 
+![Accuracy](results/accuracy.png)
+![Loss](results/loss.png)
+
+
 ---
 
 ## 🚀 Future Improvements
