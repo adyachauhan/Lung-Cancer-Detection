@@ -161,3 +161,7 @@ metrics.confusion_matrix(Y_val, Y_pred)
  
 #CLASSIFICATION REPORT
 print(metrics.classification_report(Y_val, Y_pred, target_names=classes))
+
+#To save trained model
+model.save("models/cnn_model.h5")
+print("Model saved to models/cnn_model.h5")
